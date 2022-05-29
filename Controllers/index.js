@@ -4,13 +4,14 @@ const modelsRepo = require('../Repositories/index')
 
 var StudentsControllers = {
     async getAllStudentsData(req, res){
-        modelsRepo.getAllStudentsData()
-            .then((data)=>{
-                res.send(data)
-            })
-            .catch((error)=>{
-                res.send(error)
-            })
+        res.send({message:"got data"})
+        // modelsRepo.getAllStudentsData()
+        //     .then((data)=>{
+        //         res.send(data)
+        //     })
+        //     .catch((error)=>{
+        //         res.send(error)
+        //     })
     },
 
     async getStudensDataById(req, res){
