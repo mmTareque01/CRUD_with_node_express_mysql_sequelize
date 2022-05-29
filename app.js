@@ -2,6 +2,7 @@ const express = require("express");
 const sequelize = require("./DB_Controllers/Connection");
 const app = express();
 const routers = require("./Routers/index")
+const port = process.env.PORT || 3000
 
 
 app.use(express.json());
@@ -25,7 +26,7 @@ sequelize
     // console.log(result);
 
 
-    app.listen(5000,(error)=>{
+    app.listen(port,(error)=>{
       if(error){
         console.log("making connection failed")
       }else{
